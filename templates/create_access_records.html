@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <form method="POST">
+            {% csrf_token %}
+            <h1>Displaying the Access Records  Data and Inserting Into Model</h1>
+            <label for="name1">Topic Name</label>
+            {% if TP %}
+                <select name="TP" id="TP">
+                    {% for i in TP %}
+                        <option value="{{i}}">{{i.topic_name}}</option>
+                    {% endfor %}
+                </select>    
+            {% endif %}
+            <br>
+            <label for="name2">Name</label>
+            <input type="text" name="name2" id="name2">
+            <br>
+            <label for="url">URL</label>
+            <input type="url" name="url" id="url">
+            <br>
+            <label for="date">Date</label>
+            <input type="date" name="date" id="date">
+            <br>
+            <input type="submit" value="Submit">
+        </form>
+    </center>
+</body>
+</html>

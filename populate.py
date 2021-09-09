@@ -16,7 +16,7 @@ def add_topic():
 
 def add_webpage(webpagename,url):
     t=add_topic()
-    w=webpage.objects.get_or_create(topic_name=t,name=webpagename, url=url)[0]
+    w=webpage.objects.get_or_create(topic_name=t,name=webpagename,url=url)[0]
     w.save()
     return w
 

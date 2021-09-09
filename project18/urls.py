@@ -23,4 +23,8 @@ urlpatterns = [
     path('display_Access_Record/',display_Access_Record,name='display_Access_Record'),
     path('update_webpage/',update_webpage,name='update_webpage'),
     path('delete_webpage/',delete_webpage,name='delete_webpage'),
+    path('create_topic/',create_topic,name='create_topic'),
+    path('create_webpage/',create_webpage,name='create_webpage'),
+    path('create_access_records/',create_access_records,name='create_access_records'),
+    path('multi_select/',multi_select,name='multi_select'),
 ]
